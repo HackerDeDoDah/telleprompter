@@ -1,0 +1,11 @@
+This is a sample teleprompter script.
+
+Use the Edit or Open button to change text.
+
+- Press Space to Start/Pause
+- Use the Speed slider or Up/Down keys to change scrolling speed
+- Use the Font slider or +/- keys to change font size
+- Press F11 to toggle fullscreen
+- Press M to toggle mirror (reverses characters per line)
+
+This sample demonstrates smooth scrolling. Enjoy!
