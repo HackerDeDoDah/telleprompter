@@ -1,6 +1,6 @@
 # Teleprompter (Tkinter)
 
-A lightweight teleprompter application written in Python and Tkinter. It's designed to be simple to run on Windows and easy to customize.
+A lightweight teleprompter application written in Python and Tkinter. It's designed to be simple to run on Windows and Linux and easy to customize.
 
 What this repo contains
 - `teleprompter.py` — main program (Tkinter GUI)
