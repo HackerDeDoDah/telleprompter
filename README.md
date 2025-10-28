@@ -1,66 +1,38 @@
 # Teleprompter (Tkinter)
 
-A small, cross-platform teleprompter written in Python using Tkinter.
+A lightweight teleprompter application written in Python and Tkinter. It's designed to be simple to run on Windows and easy to customize.
+
+What this repo contains
+- `teleprompter.py` — main program (Tkinter GUI)
+- `sample_script.txt` — example text to try
+- `requirements.txt` — external package list (empty by default)
 
 Features
-- Load or paste text
-- Start / Pause scrolling
-- Speed and font-size controls
-- Fullscreen mode
-- Mirror mode (reverses characters per line for reflecting setups)
-- Keyboard shortcuts: Space, F11, Up/Down, +/-, M
+- Load or paste text via the Edit window
+- Start / Pause scrolling (Start button or Space)
+- Speed and font-size controls (sliders + keyboard shortcuts)
+- Fullscreen mode (F11)
+- Styling controls: choose text color, choose background color, optional drop-shadow
+- Per-line rendering with a bottom progress bar
+- Keyboard shortcuts: Space (start/pause), Up/Down (speed), +/- (font size), F11 (fullscreen)
 
 Requirements
 - Python 3.7+ (Tkinter is included with standard CPython on Windows)
 
-Files
-- `teleprompter.py` — main program
-- `sample_script.txt` — example content
-
-Pillow (optional)
-------------------
-For true mirror (horizontally flipped) rendering, install Pillow. On Windows:
-
-```powershell
-pip install Pillow
-```
-
-If Pillow is not installed the app will fall back to a simple character-reverse mirror mode.
-
 Quick start (PowerShell)
 
 ```powershell
-# Move to project directory
-cd 'C:\Users\monke\OneDrive\Desktop\telleprompter'
-
-# Run the teleprompter (Windows)
+cd 'C:\Users\Path_to_your_folder\telleprompter'
 python teleprompter.py
 ```
 
-Installer
----------
-You can create a Windows installer (single EXE) using Inno Setup.
-
-1. Build the application first (produces `dist\teleprompter.exe`). See `build.ps1`.
-2. Install Inno Setup: https://jrsoftware.org/isinfo.php
-3. Run the included script to compile the installer:
-
-```powershell
-cd 'C:\Users\monke\OneDrive\Desktop\telleprompter'
-.\make_installer.ps1
-```
-
-This runs `ISCC.exe` on `installer.iss` and produces `teleprompter_installer.exe`.
-
 Usage notes
-- Click Open to load a .txt file, or Edit to paste text directly.
-- Start with the Start button or press Space.
-- Use F11 to toggle fullscreen.
-- Mirror reverses characters on each line (simple method that works without extra libraries).
+- Click Open to load a `.txt` file, or Edit to paste/modify the text directly.
+- Use the Speed and Font sliders to tune scrolling and readability.
+- Use Text Color / BG Color to style the display for your lighting and camera.
 
-Next steps / improvements
-- Add smooth variable-timing scrolling based on words-per-minute
-- Add text-to-image rendering to support true mirror (requires Pillow)
-- Persist settings between runs
+Notes & next steps
+- The project intentionally avoids optional image-based mirroring; the current mirror feature was removed to keep the app simple and dependency-free.
+- If you want advanced features (WPM-based scrolling, persistent settings, installer, or a true mirrored output using Pillow), I can add them on request.
 
-If you want any of those improvements, tell me which and I can add them.
+If you'd like an installer or a packaged exe, tell me whether you want an Inno Setup installer or a simpler portable ZIP and I will prepare it.
